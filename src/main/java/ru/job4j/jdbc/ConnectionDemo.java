@@ -8,20 +8,20 @@ import ru.job4j.io.Config;
 
 public class ConnectionDemo {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        // Создаем экземпляр Config и загружаем параметры из файла
+
         Config config = new Config("app.properties");
         config.load();
 
-        // Читаем параметры из конфигурации
+
         String driver = config.value("driver");
         String url = config.value("url");
         String login = config.value("login");
         String password = config.value("password");
 
-        // Загружаем драйвер
+
         Class.forName(driver);
 
-        // Подключаемся к базе данных
+
         try (Connection connection = DriverManager.getConnection(url, login, password)) {
             DatabaseMetaData metaData = connection.getMetaData();
             System.out.println(metaData.getUserName());
