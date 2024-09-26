@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person name="Jack" age="43">
+    <address>
+        <street>Crosby Street</street>
+        <number>12</number>
+        <floor>3</floor>
+    </address>
+</person>
